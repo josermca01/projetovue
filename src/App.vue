@@ -119,6 +119,7 @@
     <v-bottom-navigation
     absolute
     max-height="12px"
+    width="100%"
     background-color="grey lighten-1">
     </v-bottom-navigation>
   </v-app>
