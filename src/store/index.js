@@ -19,24 +19,24 @@ export default new Vuex.Store({
       { title: "Omie", workload: "Estagiário", date: "janeiro/2021 - Atualmente", function: "Suporte tecnico"},
     ],
     Tipos: [
-      { title: "Fire" ,color:"red"},
-      { title: "Water" ,color:"blue"},
-      { title: "Grass" ,color:"green"},
-      { title: "Poison" ,color:"purple"},
-      { title: "Ground" ,color:"deep-orange darken-4"},
-      { title: "Stell" ,color:"blue-grey lighten-3"},
-      { title: "Fighting" ,color:"deep-orange darken-4"},
-      { title: "Electric" ,color:"yellow"},
-      { title: "Flying" ,color:"blue lighten-4"},
-      { title: "Bug" ,color:"light-green darken-3"},
-      { title: "Dark" ,color:"grey darken-4"},
-      { title: "Dragon" ,color:"deep-purple darken-4"},
-      { title: "Fairy" ,color:"pink lighten-3"},
-      { title: "Ghost" ,color:"purple darken-4"},
-      { title: "Ice" ,color:"blue lighten-5"},
-      { title: "Normal" ,color:"grey darken-1"},
-      { title: "Psychic" ,color:"pink darken-1"},
-      { title: "Rock" ,color:"brown darken-1"},
+      { title: "fire" ,color:"red"},
+      { title: "water" ,color:"blue"},
+      { title: "grass" ,color:"green"},
+      { title: "poison" ,color:"purple"},
+      { title: "ground" ,color:"deep-orange darken-4"},
+      { title: "stell" ,color:"blue-grey lighten-3"},
+      { title: "fighting" ,color:"deep-orange darken-4"},
+      { title: "electric" ,color:"yellow"},
+      { title: "flying" ,color:"blue lighten-4"},
+      { title: "bug" ,color:"light-green darken-3"},
+      { title: "dark" ,color:"grey darken-4"},
+      { title: "dragon" ,color:"deep-purple darken-4"},
+      { title: "fairy" ,color:"pink lighten-3"},
+      { title: "ghost" ,color:"purple darken-4"},
+      { title: "ice" ,color:"blue lighten-5"},
+      { title: "normal" ,color:"grey darken-1"},
+      { title: "psychic" ,color:"pink darken-1"},
+      { title: "rock" ,color:"brown darken-1"},
     ],
     pokemons:[],
     title: "Tecnologias"
@@ -59,7 +59,12 @@ export default new Vuex.Store({
   },
   getters: {
     bigTitle(state) {
-      return state.title.toUpperCase()
+      return state.Tipos.map(tipo=>{
+        return{
+          title: tipo.title.toUpperCase(),
+          color: tipo.color
+        }
+      })
     },
     getPokemon(state){
       var pokemon = state.pokemons.map( pokemon=>{

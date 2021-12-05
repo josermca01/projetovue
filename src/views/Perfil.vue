@@ -39,9 +39,6 @@ export default {
     myCards() {
       return this.$store.state.cards;
     },
-    title() {
-      return this.$store.getters.bigTitle;
-    },
   },
 };
 </script>

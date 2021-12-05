@@ -4,7 +4,6 @@
     <h1 class="text-center font-weight-thin" style="color: dark">
         Experiencia
     </h1>
-    
       <v-row>
         <v-col
           v-for="(data, i) in pokemons"
@@ -17,7 +16,6 @@
           <CardEstagio :cardid="i" :cardInfo="data" />
         </v-col>
       </v-row>
-
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12"> </v-col>
       </v-row>
@@ -41,9 +39,6 @@ export default {
     },
     myCards() {
       return this.$store.state.Estagio;
-    },
-    title() {
-      return this.$store.getters.bigTitle;
     },
     getPokemon(){
       return this.$store.getters.getPokemon;
