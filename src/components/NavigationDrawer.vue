@@ -3,7 +3,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="text-h5"
-          >Rafael
+          >José
         </v-list-item-title>
         <v-list-item-subtitle style="word-break: break-word"
           >Desenvolvimento Web</v-list-item-subtitle

@@ -7,11 +7,11 @@
     
       <v-row>
         <v-col
-          v-for="(data, i) in myCards"
+          v-for="(data, i) in pokemons"
           :key="i"
           cols="12"
           sm="8"
-          md="6"
+          md="4"
           xs="4"
         >
           <CardEstagio :cardid="i" :cardInfo="data" />
@@ -36,12 +36,21 @@ export default {
     };
   },
   computed: {
+    pokemons(){
+      return this.$store.state.pokemons
+    },
     myCards() {
       return this.$store.state.Estagio;
     },
     title() {
       return this.$store.getters.bigTitle;
     },
+    getPokemon(){
+      return this.$store.getters.getPokemon;
+    }
   },
+    async created(){
+      this.$store.dispatch("fetchPokemons")
+    }
 };
 </script>

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -37,21 +38,38 @@ export default new Vuex.Store({
       { title: "Psychic" ,color:"pink darken-1"},
       { title: "Rock" ,color:"brown darken-1"},
     ],
-
-
+    pokemons:[],
     title: "Tecnologias"
   },
   mutations: {
+    SET_POKEMON(state,payload){
+      state.pokemons=payload
+    }
   },
   actions: {
+    fetchPokemons({commit}){
+      axios.get('https://pokeapi.co/api/v2/pokemon?limit=3')
+      .then((res)=>{
+        const payload = res.data.results
+        console.log(payload)
+        commit('SET_POKEMON',payload)
+      })
+      .catch(err=>{console.log(err)})
+    }
   },
   getters: {
     bigTitle(state) {
       return state.title.toUpperCase()
     },
-    getImgUrl(state) {
-      var images = require.context('../assets/', false, /\.png$/)
-      return images('./' + state.cards.image + ".png")
+    getPokemon(state){
+      var pokemon = state.pokemons.map( pokemon=>{
+        return{
+          name: pokemon.name.toUpperCase(),
+          url: pokemon.url
+        }
+      }
+      )
+      return pokemon
     }
   }
 })
