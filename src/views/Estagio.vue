@@ -6,7 +6,7 @@
     </h1>
       <v-row>
         <v-col
-          v-for="(data, i) in pokemons"
+          v-for="(data, i) in getPokemon"
           :key="i"
           cols="12"
           sm="8"
@@ -39,6 +39,9 @@ export default {
     },
     myCards() {
       return this.$store.state.Estagio;
+    },
+    title() {
+      return this.$store.getters.bigTitle;
     },
     getPokemon(){
       return this.$store.getters.getPokemon;

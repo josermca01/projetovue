@@ -8,7 +8,7 @@
     </v-row>
     <v-row>
       <v-col
-        v-for="(data, i) in tipos"
+        v-for="(data, i) in title"
         :key="i"
         cols="12"
         sm="6"
