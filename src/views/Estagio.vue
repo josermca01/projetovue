@@ -2,7 +2,7 @@
   <!-- Provides the application the proper gutter -->
   <v-container>
     <h1 class="text-center font-weight-thin" style="color: dark">
-        Experiencia
+        Pokedex
     </h1>
       <v-row>
         <v-col
