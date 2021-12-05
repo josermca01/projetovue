@@ -48,7 +48,7 @@ export default new Vuex.Store({
   },
   actions: {
     fetchPokemons({commit}){
-      axios.get('https://pokeapi.co/api/v2/pokemon?limit=3')
+      axios.get('https://pokeapi.co/api/v2/pokemon?limit=151')
       .then((res)=>{
         const payload = res.data.results
         console.log(payload)
