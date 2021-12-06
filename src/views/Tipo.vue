@@ -25,7 +25,7 @@
   </v-container>
 </template>
 <script>
-import SimpleCard from "@/components/Cursando";
+import SimpleCard from "@/components/Tipo";
 export default {
   components: {
     SimpleCard,

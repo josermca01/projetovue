@@ -13,7 +13,7 @@
           md="4"
           xs="4"
         >
-          <CardEstagio :cardid="i" :cardInfo="data" />
+          <CardTipo :cardid="i" :cardInfo="data" />
         </v-col>
       </v-row>
       <v-row align="center" justify="center">
@@ -23,14 +23,14 @@
   </v-container>
 </template>
 <script>
-import CardEstagio from "@/components/CardEstagio";
+import CardTipo from "@/components/Pokedex";
 export default {
   components: {
-    CardEstagio,
+    CardTipo,
   },
   data() {
     return {
-      titleView: this.$store.state.Estagio,
+      titleView: this.$store.state.pokemons,
     };
   },
   computed: {

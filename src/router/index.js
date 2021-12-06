@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Cursando from '../views/Cursando.vue'
-import Estagio from '../views/Estagio.vue'
+import Tipo from '../views/Tipo.vue'
+import Pokedex from '../views/Pokedex.vue'
 import Perfil from '../views/Perfil.vue'
 
 
@@ -15,9 +15,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/Estagio',
-    name: 'Estagio',
-    component: Estagio
+    path: '/Pokedex',
+    name: 'Pokedex',
+    component: Pokedex
   },
   {
     path: '/Perfil',
@@ -25,9 +25,9 @@ const routes = [
     component: Perfil
   },
   {
-    path: '/Cursando',
-    name: 'Cursando',
-    component: Cursando
+    path: '/Tipo',
+    name: 'Tipo',
+    component: Tipo
   },
 ]
 

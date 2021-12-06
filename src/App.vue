@@ -39,11 +39,11 @@
       },
       {
         title: "Pokedex",
-        address: "/Estagio",
+        address: "/Pokedex",
       },
       {
         title: "Tipos",
-        address: "/Cursando",
+        address: "/Tipo",
       },
     ],
        titleView:this.$store.state.cards
