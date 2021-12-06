@@ -14,10 +14,6 @@ export default new Vuex.Store({
       { title: "Vue.js", level: "Básico" },
       { title: "C", level: "Intermediario" },
     ],
-    Estagio: [
-      { title: "F5 Tecnologia", workload: "Estagiário", date: "Julho/2020 - Janeiro/2021", function: "Suporte tecnico" },
-      { title: "Omie", workload: "Estagiário", date: "janeiro/2021 - Atualmente", function: "Suporte tecnico"},
-    ],
     Tipos: [
       { title: "fire" ,color:"red"},
       { title: "water" ,color:"blue"},
@@ -39,7 +35,6 @@ export default new Vuex.Store({
       { title: "rock" ,color:"brown darken-1"},
     ],
     pokemons:[],
-    title: "Tecnologias"
   },
   mutations: {
     SET_POKEMON(state,payload){
